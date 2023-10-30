@@ -1,0 +1,28 @@
+
+.main-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.header {
+background-color: rgb(107, 47, 90);
+height: 20%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.middle {
+height: 60%;
+background-color: lightgoldenrodyellow;
+display: flex;
+justify-content: center;
+}
+
+.footer {
+height: 30%;
+display: flex;
+justify-content: center;
+}
