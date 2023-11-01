@@ -23,6 +23,7 @@ justify-content: center;
 flex-direction: column;
 align-items: center;
 padding: 2em;
+flex-direction: row;
 }
 
 .footer {
@@ -33,16 +34,18 @@ background-color: rgb(152, 37, 37);
 }
 
 .middle img {
-    height: 50%;
-    width: 50%;
+    height: 30%;
+    width: 30%;
    margin-top: 50px;
    margin-bottom: 50px;
+   padding: 1em;
 }
 
 @media only screen and (max-width: 600px) {
   .middle {
-    background: rgb(241, 233, 218);
-  padding: 2em; }
+    background: rgb(255, 253, 240);
+    padding: 2em; 
+    flex-direction: column;}
 
   .middle img{ 
     height: 70%;
@@ -52,5 +55,11 @@ background-color: rgb(152, 37, 37);
 
   .footer {
     background-color: rgb(4, 87, 123);
+  }
+
+  h1 { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400s;
+    color: rgb(253, 250, 238);
   }
 
