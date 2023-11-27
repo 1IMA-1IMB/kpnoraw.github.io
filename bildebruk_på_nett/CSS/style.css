@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bil {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(231, 245, 235);
+    border: 1px solid black;
+}
+
+.bjorn { 
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(229, 222, 210);
+    border: 1px solid black;
+}
+
+.by {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(230, 225, 225);
+    border: 1px solid black;
+}
+
+.desert {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(223, 238, 249);
+    border: 1px solid black;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(241, 244, 233);
+    border: 1px solid black;
+}
+
+.fugl { 
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 251, 231);
+    border: 1px solid black;
+}
+
+.louvre {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 241, 231);
+    border: 1px solid black;
+}
+
+.sognefjord {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(240, 247, 254);
+    border: 1px solid black;
+}
+
+.solnedgang {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 248, 240);
+    border: 1px solid black;
+}
+
+.flagg {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(230, 229, 229);
+    border: 1px solid black;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text3{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text4 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text5 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text6 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text7 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text8 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text9 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.text10 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
