@@ -16,6 +16,7 @@
     position: sticky;
     height: 115px;
     top: -75px;
+    z-index: 500;
   }
 
 .header-inner img {
