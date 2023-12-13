@@ -94,12 +94,12 @@ body {
 
  .bottom-left {
     position: absolute;
-    bottom: -60px;
-    left: 100px;
-    color: #dfbd36;
+    bottom: -130px;
+    left: 15px;
+    color: #aaa9a9;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 400%;
-    font-weight: 700;
+    font-size: 100%;
+    font-weight: 500;
 }
 
  .container {
