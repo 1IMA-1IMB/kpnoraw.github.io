@@ -1,0 +1,315 @@
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #751515;
+    width: 100%;
+    height: 115px;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-outer {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    height: 115px;
+    top: -75px;
+  }
+
+.header-inner img {
+    margin-top: 15px;
+}
+
+body {
+    margin: 0px;
+    padding: 0%;
+    background-color: #000000;
+    justify-content: center;
+}
+
+.subheader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: space-around;
+   margin-top: 2px;
+}
+
+.music {
+   display: flex;
+   justify-content: space-around;
+   height: 40px;
+   width: 50%;
+   align-items: center;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+    position: relative;
+ }
+
+.merch {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+ }
+
+ .tour {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+ }
+
+.subheader a {
+    color: rgb(187, 117, 117);
+    text-decoration: none; 
+    padding: 2em;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+ }
+ 
+ input[type=text]:focus { 
+     width: 100%;
+ }
+ 
+ a:hover {
+     color: rgb(239, 185, 185) ;
+ }
+
+ .albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+ }
+
+ .albums iframe {
+    width: 40%;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+ }
+
+ .starcatcher, .gardens-gate, .peaceful-army, .fromthefire {
+    display: flex;
+    background-color: #282828;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    color: rgb(255, 255, 255);
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+ }
+
+ h2, h3, h4, h5 {
+    color: #ffffff;
+    font-size: 180%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-top: -10px;
+    align-self: center;
+ }
+
+ h1 {
+    align-self: center;
+    font-size: 250%;
+    margin-bottom:10px;
+    color: rgb(142, 142, 142);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+ }
+
+ .hero-image {
+    display: flex;
+    margin-bottom: 50px;
+ }
+
+ h6 {
+    align-self: center;
+    font-size: 250%;
+    margin-bottom: 10px;
+    color: rgb(142, 142, 142);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+ }
+
+ .singles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+ }
+
+ .singles iframe {
+    margin-bottom: 10px;
+    margin-top: 10px;
+ }
+
+ @media only screen and (min-width: 601px) {
+
+   .music-media-query {
+       display: none;
+   }
+
+   .merch-media-query {
+       display: none;
+   }
+
+   .tour-media-query{
+       display: none;
+   }
+
+  }
+
+ @media only screen and (max-width: 600px) {
+
+    .hero-image img{ 
+      width: 100%; 
+      margin-top: 0px;
+    }
+
+  .container {
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .subheader { 
+      display: none;
+  }
+
+  .header img {
+      width: 40%;
+      height: 40%;
+  }
+
+  .header-outer {
+   position: sticky;
+   width: 100%;
+   display: flex;
+   top: -10px;
+   height: 90px;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: row;
+}
+
+.header-inner {
+   position: sticky;
+   display: flex;
+   height: 90px;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: row;
+}
+
+.music-media-query a, .merch-media-query a, .tour-media-query a {
+   color: rgb(187, 117, 117);
+   text-decoration: none; 
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 550;
+}
+
+body {
+contain: paint; 
+}
+
+
+.albums {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: center;
+   margin: auto;
+}
+
+.albums iframe {
+   width: 90%;
+   justify-content: space-around;
+   margin-bottom: 10px;
+   margin-right: 20px;
+   margin-top: 10px;
+   margin: auto;
+}
+
+.starcatcher, .gardens-gate, .peaceful-army, .fromthefire {
+   display: flex;
+   background-color: #282828;
+   width: 77%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 110%;
+   color: rgb(255, 255, 255);
+   padding: 2em;
+   border-radius: 10px;
+   margin-bottom: 10px;
+   margin-top: 30px;
+   justify-content: space-around;
+   flex-direction: column;
+   margin: auto;
+}
+
+.eps {
+   display: flex;
+   text-align: center;
+}
+
+.singles {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: center;
+   margin: auto;
+   margin-bottom:30px;
+   align-items: center;
+}
+
+.singles iframe {
+   margin-bottom: 10px;
+   margin-top: 10px;
+   width: 130%;
+}
+
+}
+    
+footer {
+   text-align: center;
+   padding: 3px;
+   background-color: rgb(123, 21, 21);
+}
+
+footer p {
+   font-family: Arial, Helvetica, sans-serif;
+   color: #aa5b5b;
+   font-weight: 550;
+   font-size: larger;
+}
+
+.padding{
+   padding-top:10px;
+   padding-bottom:10px
+}

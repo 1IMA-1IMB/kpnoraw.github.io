@@ -1,0 +1,287 @@
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #751515;
+    width: 100%;
+    height: 115px;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-outer {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    height: 115px;
+    top: -75px;
+  }
+
+.header-inner img {
+    margin-top: 15px;
+}
+
+body {
+    margin: 0px;
+    padding: 0%;
+    background-color: #000000;
+    justify-content: center;
+}
+
+.subheader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: space-around;
+   margin-top: 2px;
+}
+
+.music {
+   display: flex;
+   justify-content: space-around;
+   height: 40px;
+   width: 50%;
+   align-items: center;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+    position: relative;
+ }
+
+.merch {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+ }
+
+ .tour {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+ }
+
+.subheader a {
+    color: rgb(187, 117, 117);
+    text-decoration: none; 
+    padding: 2em;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+ }
+ 
+ input[type=text]:focus { 
+     width: 100%;
+ }
+ 
+ a:hover {
+     color: rgb(239, 185, 185) ;
+ }
+
+ .hero-image img {
+    margin-top: -120px;
+ }
+
+ .bottom-left {
+    position: absolute;
+    bottom: -60px;
+    left: 100px;
+    color: #dfbd36;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 400%;
+    font-weight: 700;
+}
+
+ .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000;
+ }
+
+ h1 {
+    align-self: center;
+    font-size: 250%;
+    margin-bottom: 10px;
+    color: rgb(142, 142, 142);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+ }
+
+ .spotify {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.tekst {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 300px;
+    background-color: #cf8a8a;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 250%;
+    color: rgb(87, 5, 5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;   
+    margin: auto;
+    margin-top: 20px;
+}
+
+p { 
+    padding: 2em;
+    margin-top: -20px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+   @media only screen and (min-width: 601px) {
+
+    .spotify {
+        display: flex;
+    }
+
+    .spotify iframe{
+        max-width: 49%;
+        justify-content: space-around;
+        margin-bottom: 15px;
+    }
+
+    .music-media-query {
+        display: none;
+    }
+
+    .merch-media-query {
+        display: none;
+    }
+
+    .tour-media-query{
+        display: none;
+    }
+
+   }
+
+    @media only screen and (max-width: 600px) {
+
+          .hero-image img{ 
+            width: 100%; 
+            margin-top: 0px;
+          }
+ 
+        .container {
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+     
+        .spotify {
+            display: flex;
+            width: 100%;
+        }
+
+        .spotify iframe{
+            max-width: 90%;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .subheader { 
+            display: none;
+        }
+
+        .header img {
+            width: 35%;
+            height: 35%;
+        }
+
+        .header-outer {
+            position: sticky;
+            width: 100%;
+            display: flex;
+            top: -10px;
+            height: 90px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .header-inner {
+            position: sticky;
+            display: flex;
+            height: 90px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .music-media-query a, .merch-media-query a, .tour-media-query a {
+            color: rgb(187, 117, 117);
+            text-decoration: none; 
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 550;
+        }
+
+body {
+    contain: paint; 
+}
+    }
+    
+    .spotify {
+        width: 96%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+    align-self: center;
+    font-size: 250%;
+    margin-bottom: 10px;
+    color: rgb(142, 142, 142);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600; 
+    }
+    
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(123, 21, 21);
+}
+
+footer a {
+    padding: 10px;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #aa5b5b;
+    font-weight: 550;
+    font-size: larger;
+ }
