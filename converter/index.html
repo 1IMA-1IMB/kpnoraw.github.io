@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="CSS/style.css"> 
+</head>
+<body>
+ 
+<h1>Converter</h1>
+
+<label>From liters</label>
+<input id="inputmaalenhet" type="number" placeholder="Liters"
+oninput="measureFunc(this.value)" onchange="measureFunc(this.value)">
+
+<label for="maalenhet">To</label>
+
+<select name="maalenhet" id="maalenhet">
+  <option value="gallons">Gallons</option>
+  <option value="ounces">Ounces</option>
+  <option value="cups">Cups</option>
+  <option value="tablespoons">Tablespoons</option>
+</select>
+
+<p id="maalenhetOutput"></p>
+
+<label for="maalenhet">To</label>
+
+    <script src="JS/index.js"> 
+    </script>
+    
+
+</body>
+</html>
