@@ -8,28 +8,49 @@
 </head>
 <body>
  
+<div class="container"> 
+
 <h1>Converter</h1>
 
-<label>From liters</label>
-<input id="inputmaalenhet" type="number" placeholder="Liters"
-oninput="measureFunc(this.value)" onchange="measureFunc(this.value)">
+  <h3>Målenhet converter</h3>
 
-<label for="maalenhet">To</label>
+  <div class="converter">
 
-<select name="maalenhet" id="maalenhet">
-  <option value="gallons">Gallons</option>
-  <option value="ounces">Ounces</option>
-  <option value="cups">Cups</option>
-  <option value="tablespoons">Tablespoons</option>
-</select>
+    <input type="text" id="userInput" placeholder="Hvor mye?" onchange="measureFunc()">
+      <select name="measure" id="from" onchange="measureFunc()">
+          <option value="3.78541">Gallons</option>
+          <option value="0.0295735">Ounces</option>
+          <option value="0.236588">Cups</option>
+         <option value="0.0147868">Spiseskjeer</option>
+          <option value="1">Liter</option>
+        </select>
+      
+        <span> &#xf30b; </span>
 
-<p id="maalenhetOutput"></p>
+        <select name="measure" id="to" onchange="measureFunc()">
+          <option value="3.78541">Gallons</option>
+          <option value="0.0295735">Ounces</option>
+          <option value="0.236588">Cups</option>
+          <option value="0.0147868">Spiseskjeer</option>
+          <option value="1">Liter</option>
+       </select>
+     
+  </div>
 
-<label for="maalenhet">To</label>
+ <p id="output"></p>
 
-    <script src="JS/index.js"> 
-    </script>
+  <div class="palindrom">
+    <h3> Palindrom sjekk </h3>
+
+    <input type="text" id="palindromInput" placeholder="Skriv inn ord" onchange="palindromFunc()">
     
+    <p id="palindromOutput"> </p>
+  </div>
+
+</div>   
+
+
+<script src="JS/index.js"></script>
 
 </body>
 </html>

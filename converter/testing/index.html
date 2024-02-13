@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="CSS/style.css"> 
+</head>
+<body>
+ 
+<h1>Converter</h1>
+
+<input type="text" id="fInput" placeholder="Hvor mye?" onchange="measureFunc()">
+    <select name="measure" id="from" onchange="measureFunc()">
+      <option value="3.78541">Gallons</option>
+      <option value="0.0295735">Ounces</option>
+      <option value="0.236588">Cups</option>
+      <option value="0.0147868">Spiseskjeer</option>
+      <option value="1">Liter</option>
+    </select>
+    ==>
+    <select name="measure" id="to" onchange="measureFunc()">
+      <option value="3.78541">Gallons</option>
+      <option value="0.0295735">Ounces</option>
+      <option value="0.236588">Cups</option>
+      <option value="0.0147868">Spiseskjeer</option>
+      <option value="1">Liter</option>
+    </select>
+    <p id="fOutput"></p>
+
+<script src="index.js"></script>
+
+</body>
+</html>

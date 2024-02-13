@@ -1,26 +1,19 @@
-
-let gallons = 3.785141 ;
-let ounces = 0.0295735 ;
-let cups = 0.236588 ;
-let tablespoons = 0.0147868 ;
-
-function measureFunc(input) {
-
-measure = document.getElementById("maalenhet");
-measure.value 
-
-if(measure.value == "tablespoons"){
-    document.getElementById("maalenhetOutput").innerHTML = input / tablespoons;
-}else if(measure.value == "ounces"){
-    document.getElementById("maalenhetOutput").innerHTML = input / ounces;
-}else if(measure.value == "cups"){
-    document.getElementById("maalenhetOutput").innerHTML = input / cups;
-}else if(measure.value == "gallons"){
-    document.getElementById("maalenhetOutput").innerHTML = input / gallons;
-}
-
+function measureFunc(){ //funksjon til konverteringen
+    const userInput = document.getElementById("userInput").value // henter tallet som har blitt skrevet inn
+    const from = parseFloat(document.getElementById("from").value) // definerer selecten som har blitt satt å konvertere fra
+    const to = parseFloat(document.getElementById("to").value) // definerer selecten som har blitt satt til å konvertere til
+    document.getElementById("output").innerHTML = (userInput * from)/ to // regner ut målenhetene, med enten ganging eller deling
 }
 
 
+//palindrom oppg
+function palindromFunc(){
+    const palindrom = document.getElementById("palindromInput").value.toLowerCase()
+    const endret = palindrom.split("").reverse().join("")  
 
-
+    if (palindrom == endret){ 
+        document.getElementById("palindromOutput").innerHTML = "Palindrom" 
+    } else {     
+        document.getElementById("palindromOutput").innerHTML = "Ikke palindrom" 
+    } 
+}
