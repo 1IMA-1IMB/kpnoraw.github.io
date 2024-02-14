@@ -12,6 +12,8 @@ h2, h3 {
 
 body {
   background-color: rgb(209, 216, 215);  
+  margin: 0px;
+  padding: 0px;
 }
 
 .container {
@@ -26,6 +28,7 @@ body {
     justify-content: space-evenly;
     width: 500px;
     margin-top: 0px;
+    margin-bottom: 40px;
 }
 
 .converter select {
@@ -53,6 +56,7 @@ body {
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     border-radius: 7px;
+    height: 28px;
 }
 
 .palindrom {
@@ -62,5 +66,15 @@ body {
     align-items: center;
 }
 
-
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 252, 251);
+    height: 5em;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
 

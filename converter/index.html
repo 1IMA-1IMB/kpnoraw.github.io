@@ -8,16 +8,22 @@
 </head>
 <body>
  
+<!-- Container -->
 <div class="container"> 
 
-<h1>Converter</h1>
+<!-- Header -->
+<div class="header"> 
+  <h1>Converter</h1>
+</div>
 
+  <!-- Overskrift til målenhet-converteren -->
   <h3>Målenhet converter</h3>
 
   <div class="converter">
 
-    <input type="text" id="userInput" placeholder="Hvor mye?" onchange="measureFunc()">
-      <select name="measure" id="from" onchange="measureFunc()">
+    <input type="text" id="userInput" placeholder="Hvor mye?" onchange="measureFunc()"> <!-- lager en input der man kan skrive inn hvor mye man har -->
+
+      <select name="measure" id="from" onchange="measureFunc()"> <!-- lager en select sånn at brukeren kan velge hvilken målenhet å konvertere fra. alle optionsene har en value lagt inn. -->
           <option value="3.78541">Gallons</option>
           <option value="0.0295735">Ounces</option>
           <option value="0.236588">Cups</option>
@@ -25,9 +31,10 @@
           <option value="1">Liter</option>
         </select>
       
-        <span> &#xf30b; </span>
+        <!-- Bilde av en pil. CC BY-SA 4.0 DEED. https://creativecommons.org/licenses/by-sa/4.0/deed.en -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flowchart_arrow.svg" width="50px" height="45px">
 
-        <select name="measure" id="to" onchange="measureFunc()">
+        <select name="measure" id="to" onchange="measureFunc()"> <!-- lager en select sånn at brukeren kan velge hvilken målenhet å konvertere til. -->
           <option value="3.78541">Gallons</option>
           <option value="0.0295735">Ounces</option>
           <option value="0.236588">Cups</option>
@@ -37,19 +44,22 @@
      
   </div>
 
+ <!-- Outputter svaret  -->
  <p id="output"></p>
 
+  <!-- Palindrom oppg -->
   <div class="palindrom">
     <h3> Palindrom sjekk </h3>
 
-    <input type="text" id="palindromInput" placeholder="Skriv inn ord" onchange="palindromFunc()">
+    <input type="text" id="palindromInput" placeholder="Skriv inn ord" onchange="palindromFunc()"> <!-- lager en input der man kan skrive inn ordet/setningen sin. -->
     
+    <!-- Outputter om det er et palindrom eller ikke -->
     <p id="palindromOutput"> </p>
   </div>
 
 </div>   
 
-
+<!-- Kobler opp JS og HTML -->
 <script src="JS/index.js"></script>
 
 </body>
