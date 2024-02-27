@@ -1,0 +1,547 @@
+body, html{
+    height: 100%; /* Setter høyde på body og html for å få parallax til å fungere */
+    background-color: rgb(248, 247, 244); /*Setter farge på generell bakgrunn, ser bedre ut */
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(33,200,169);
+background: radial-gradient(circle, rgb(91, 155, 172) 0%, rgb(92, 119, 170) 51%, rgb(71, 38, 181) 100%);
+    width: 100%;
+    height: 120px;
+    top: 0;
+    text-transform: uppercase;
+  }
+
+.header-inner p {
+    font-size: 260%;
+    color: #ffffff;
+}
+
+
+/* Generel class for å sentrere tekst og elementer */
+.center{
+    text-align: center; /* Midtstiller teksten */
+    margin: auto; /* Sentrerer elementene */
+    align-items: center; /* sentrerer det */
+}
+
+body {
+    margin:0; /* Setter margin til 0 så skjermen blir dekket */
+    font-family: Arial, Helvetica, sans-serif; /* Setter generel font til nettsiden */
+    overflow-x: hidden; /* Hide scrollbars */
+
+}
+
+/* Klasse for å gjøre at bilder ikke stretcher */
+.nostretch{
+    object-fit: cover;
+}
+
+/* Klasse for å høyrestille ting */
+.right{
+    right: 0;
+}
+
+/* Klasse for å venstrestille elementer */
+.left{
+    left: 0;
+}
+
+.content {
+    background-color: #f6f9fa; /* Setter bakgrunnsfarge */
+    padding: 10px; /* setter padding */
+    overflow:hidden; /* Gjør sånn at siden holder seg innenfor skjermen */
+}
+
+/* Klassen som gjør at bakgrunnsbildene fryser */
+.parallax {
+    background-attachment: fixed; /* Gjør sånn at bildet ikke scroller */
+    background-position: center; /* Sentrerer bildet */
+    background-repeat: no-repeat; /* Gjør sånn at bildet bare viser en gang */
+    background-size: cover; /* Gjør sånn at bildet dekker bakgrunn */
+    min-height: 100%; /* Setter minimumshøyde til 90% */
+    top:0; /* Setter bildet på toppen */
+    background: rgb(255,0,25);
+    background: linear-gradient(45deg, rgba(255,0,25,1) 0%, rgba(223,0,255,1) 100%);
+}
+
+.textel{
+    color:#141414; /*Setter tekstfarge til #ddd, en skygge av hvit */
+    cursor: default; /* setter sånn at musepekeren er normal når man hoverer over teksten */
+}
+
+.textel p strong{
+    text-transform: uppercase; /* gjør sånn at alle strong tager i textel blir store bokstaver */
+    font-size: 40px;
+}
+
+.textel p{
+    font-size: 21px; /* Setter font størelsen til paragrafer i texel til 25 */
+}
+
+.artimg{
+    max-width: 100%; /* setter bildet til 100% bredde */
+    max-height: auto; /* Automatisk justerer høyde */
+}
+
+.imgart {
+    color:#ddd; /* Setter tekstfarge til #ddd */
+}
+
+/* Klassen hvit, brukt på cc linker for å få tekst hvit */
+.white, .white a:link, a:visited, a:active{
+    color:#ddd /* Setter farge til #ddd */
+}
+
+/* Samme som over bare sort */
+.black, .black a:link,.black a:visited,.black a:active{
+    color:#141414 /* setter fargen til #141414 */
+}
+
+/* Teksten som er over forsidebildene  */
+.caption {
+    position: absolute; /* Setter fast position */
+    width: 100%; /* setter bredde til 100% */
+    text-align: center; /* sentrerer teksten */
+    cursor: default; /* Setter musepeker til vanilg når man hoverer over teksten */
+    top: 20%; /* Setter 25% ned fra toppen */
+    z-index: 1; /* gjør så teksten ligger over bildene */
+}
+
+/* p elementer med class header i caption */
+.header {
+    color: #fff; /* Setter farge til fff */
+    padding: 18px 18px 0px; /* Setter padding */
+    letter-spacing: 10px; /* Plass mellom bokstaver */
+    cursor: default; /* Setter cursor til vanlig når man hoverer over teksten */
+    text-transform: uppercase; /* setter til store bokstaver */
+}
+
+#art2{
+    margin-top: 2em /* Setter margin til 2 em fra div-en over. */
+}
+
+/* Klasse button, brukt på knappen på hovedsiden */
+.button {
+    position: relative; /* Posisjonerer relativt til elemntet det er i */
+    padding: 16px 30px;/*  Setter padding til 16 over og under og og 30 til sidene */
+    font-size: 1.5rem; /* Setter font størelse til 1.5 rem, 1.5 større en fonten til roten av elementet */
+    color: aqua; /* Setter tekst farge til aqua */
+    text-shadow: 0 0 15px aqua; /* Setter tesktskygge til aqua med radius på 15 px */
+    text-decoration: none; /* Fjerner tekst dekorasjoner */
+    text-transform: uppercase; /* Gjør så alle bokstavene er store */
+    letter-spacing: 0.1rem; /* Setter spacingen mellom bokstavene til 0.1rem */
+    z-index: 3; /* Gjør så knappen er over andre elementer */
+}
+
+/* Når man hoverer over knappen */
+.button:hover {
+    color: #fff; /* Endrer tekst farge */
+    box-shadow: 0 0 0px aqua; /* Setter skyggen til knappen til aqua */
+    cursor:pointer; /* endrer cursor når man hoverer til pointer */
+}
+
+/* Styling til den blåe boksen før den popper opp */
+.button::before {
+    content: ''; /* Innholdet i knappen */
+    position: absolute; /* Setter fast posisjon */
+    top: 0; /* Setter den til toppen */
+    left: 0; /* Stiller den til venstre */
+    width: 100%; /* 100% bredde */
+    height: 100%; /* 100% høyde */
+    background: aqua; /* Bakgrunnsfarge aqua */
+    z-index: -1; /* setter z-index til -1 */
+    transform: scale(0); /* Setter den til å ikke være synlig */
+    transition: 0.1s; /* Tiden for endre mellom at den er synlig og ikke */
+}
+
+/* Gjør den blåe boksen synlig når man hoverer */
+.button:hover::before {
+    transform: scale(1); /* Setter sden til å dekke av knappen */
+    box-shadow: 0 0 10px aqua, 0 0 30px aqua, 0 0 60px aqua; /* Setter boks shaddow når man hoverer */
+}
+
+/* Generell margin på 5% av skjerm størelse til toppen av elementet, brukes når elementer sitter for tett */
+.marg{
+    margin-top: 5%; /* Setter margin på toppen av elementet til 5% */
+}
+
+/* Slideshowet på forsiden */
+.slider .slide {
+    position: absolute; /* setter fast position */
+    left: 0; /* venstrestiller det */
+    width: 100%;/* Setter så det tar opp 100% av bredden til skjermen */
+    height: 90%;/* Setter høyden til 90% av skjermen sin høyde */
+    background-size: cover;/* Gjør så det dekker området */
+    background-position: center;/* Sentrerer bildet */
+    animation: slide 20s infinite;/* Endrer på bildene */
+}
+
+/* Klasse for fast posisjon */
+.absolute{
+    top: 90%; /* settes 90% av skjermen fra toppen */
+    position: absolute; /* fast posisjon */
+}
+
+/* Denne media-en har jeg laget får å endre på bildene etter en viss størelse, jeg har cropet bildene */
+@media only screen and (max-width:600px) {
+
+/* Setter nødvendige properties for at scaling skal gå opp */
+.mback{
+    min-height: 90%; /* Setter minimumshøyde til 90% */
+    top:0; /* setter den helt til topen */
+    -webkit-transform: scale(1); /* Setter skalaen til 1 */
+    transform: scale(1);/* Setter skalaen til 1 */
+    -webkit-transform-origin: center; /* Sentrerer det */
+    transform-origin: center;/* Sentrerer det */
+}
+
+/* alle unner endrer på bildet basert på hvilke side det er */
+#dimg{
+    background-image: url("../images/diaspora_forside_mobil.png");
+}
+
+#oimg{
+    background-image: url("../images/omar_sheriff_forside.jpg");
+}
+
+#eimg{
+    background-image: url("../images/eldre_forside_mobil.png");
+}
+
+#simg{
+    background-image: url("../images/singel_forside_mobil.png");
+}
+
+.slider .slide:nth-child(1) {
+    background-image: url("../images/bilde_1_forside_crop.png");
+}
+
+/* Gjør så et element ikke er synlig da denne siden vises, brukes for å få riktig cpoyright attribution */
+.sno{
+    display: none;
+}
+
+}
+
+@media only screen and (min-width:601px){
+
+/* Setter størelse og posisjon til elementet */
+.mback{
+    min-height: 90%; /* Setter minimumshøyde til 90% */
+    top:0; /* Stiller den til toppen */
+}
+
+/* alle unner endrer bildet */
+#dimg{
+    background-image: url("../images/diaspora_forside_desktop.jpg");
+}
+
+#oimg{
+    background-image: url("../images/omar_sheriff_forside.jpg");
+}
+
+#eimg{
+    background-image: url("../images/eldre_forside_desktop.jpg");
+}
+
+#simg{
+    background-image: url("../images/singel_forside_desktop.jpg"); 
+}
+
+.slider .slide:nth-child(1) {
+    background-image: url("../images/bilde_1_forside.jpg");
+}
+
+/* Gjør så et element ikke er synlig da denne siden vises, brukes for å få riktig cpoyright attribution */
+.bno{
+    display: none;
+}
+    
+}
+
+/* media querry for styling av mobil og tablet */
+@media only screen and (max-width:991px){
+
+/* setter strong tagger i textel til font størelse 30 */
+.textel strong{
+    font-size: 30px;
+}
+
+/* Setter header classen i paragraf elementer i caption til størelse 50 */
+.header{
+    font-size: 50px;
+}
+
+/* Klasse for font størelse 40 */
+.bigtext{
+    font-size: 40px;
+}
+
+/* gjør så noe ikke displayes i denne størelsen */
+.no{
+    display: none;
+}
+
+/* Styling for copyright attribution */
+.scc{
+    position: absolute;
+    top:90%;
+    right: 0;
+    z-index: 500;
+}
+
+/* settter klasse width sin bredde til 90% av skjermen sin bredde */
+.width{
+    width: 90%;
+}
+
+/* flexer elementene i klassen flex */
+.flex{
+    display: flex;
+    flex-direction: column; /* Får de til å vises i en column */
+    align-items: center; /* Sentrerer elementene */
+}
+
+/* Sentrerer teksten i content */
+.content{
+    text-align: center;
+} 
+
+/* Sentrerer text i textel */
+.textel{
+    text-align: center;
+    margin: auto;
+}
+
+/* Styler topnav */
+.topnav {
+    overflow: hidden; /* Gjør så det ikke går utenfor elementet */
+    background-color: blue; /* Setter fargen til violet */
+    position: relative; /* Gjør så den er på toppne av siden */
+    z-index: 500; /* Gjør så den er over bildet */
+}
+
+/* gjør så id-en my links i topnav ikke vises */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Styler linkene i topnav */
+.topnav a {
+    color: white; /* Setter text farge til sort */
+    padding: 14px 16px; /* Setter padding */
+    text-decoration: none; /* Fjerner tekst dekorasjon */
+    font-size: 17px; /* Setter font størelse */
+    display: block; /* Displayer det som en block */
+}
+
+/* når man hoverer over linkene i topnav blir cursor til pointer */
+.topnav a:hover{
+    cursor: pointer;
+}
+
+/* Styler burgermenyen */
+.topnav a.icon {
+    background: violet;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Styler classen active */
+.active {
+    background-color: #ddd; /* Setter bakgrunnsfarge til hvit */
+    color: white; /* Setter tekst farge til hvit */
+}
+    
+/* Styler logoen */
+.topnav .imglink{
+    content: url("../images/karpe_logo.png"); /* Setter bildet */
+    padding-top: 2px; /* Setter top padding */
+    padding-left: 14px; /* Setter left padding */
+    padding-right: 14px; /* Setter right padding */
+    padding-bottom: 2px; /* Setter bunn padding */
+    width: auto; /* Setter bredde til auto */
+    max-height: 44px; /* Setter maks høyde */
+} 
+
+}
+/* PC størelse */
+@media only screen and (min-width:992px){
+
+/* Animasjonen til slideshowet */
+@keyframes slide {
+    0%, 15%, 100% {
+        transform: translateX(0);
+        animation-timing-function: ease;
+    }
+    20% {
+        transform: translateX(-100%);
+        animation-timing-function: step-end;
+    }
+    95% {
+        transform: translateX(100%);
+        animation-timing-function: ease;
+    }
+}
+
+
+/* Alle unner er samme så jeg forklarer bare en 
+Bildene til slideshowet*/
+.slider .slide:nth-child(1) {
+    background-image: url("../images/bilde_1_forside.jpg"); /* Endrer på bildet */
+    animation-delay: 0; /* Animasjonstiden */
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url("../images/bilde_2_forside.png");
+    animation-delay: -4s;
+}
+
+.slider .slide:nth-child(3) {
+    background-image: url("../images/bilde_3_forside.jpg");
+    animation-delay: -8s;
+}
+
+.slider .slide:nth-child(4) {
+    background-image: url("../images/bilde_4_forside.jpg");
+    animation-delay: -12s;
+}
+
+.slider .slide:nth-child(5) {
+    background-image: url("../images/bilde_5_forside.jpg");
+    animation-delay: -16s;
+}
+
+/* Strong tag sin tekst i textel er 50px */
+.textel strong{
+    font-size: 50px;
+}
+
+/* Klassen bigtext sin tekst er 60px */
+.bigtext{
+    font-size: 60px;
+}
+
+/* Paragraf med header class i caption sin tekst er 100px */
+.header{
+    font-size: 50px;
+}
+
+/* Styling til cpoyright attribution */
+.scc{
+    position: absolute; /* Setter fast posisjon */
+    top:90%; /* 90% ned fra toppen */
+    right:0 /* Høyrestilt */
+}
+
+/* width klassen sin bredde er 50% av skjermen sin bredde */
+.width{
+    width: 50%;
+}    
+
+/* flex klassen flexer ting i en rad */
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Setter bredde på scrollbaren på siden av skjermen */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Styler bagkrunnen til scrollbaren */
+::-webkit-scrollbar-track {
+    border-radius: 8px; /* Runder hjørnenene */
+    background-color: #e7e7e7; /* Setter bakgrunnsfarge */
+    border: 1px solid #cacaca; /* Setter en border på 1 px med en farge */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3); /* Gir en skygge */
+}
+
+/* Styler selve greia som beveger seg i scrollbaren */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px; /* Runder hjørner */
+    background-color: #141414; /* Setter farge */
+}
+
+/* Setter maks bredde på textel til 60% */
+.textel{
+    max-width: 60%;
+}
+
+/* setter en padding på 10px til klassen padding */
+.padding{
+    padding: 10px
+}    
+
+/* Flexer klassen art */
+.art{
+    display: flex;
+}
+
+/* Styler bildet i topnav */
+.topnav .imglink{
+    content: url("../images/karpe_logo.png"); /* Setter bildet */
+    width: auto; /* Setter automatisk bredde basert på høyde */
+    max-height: 46px; /* Setter maks høyde til 46px */
+}
+
+/* styler topnav */
+.topnav {
+    top: 0; /* Stiller den på toppen av siden */
+
+    /* setter den sp den dekkser fra venstre til høyde */
+    left: 0; 
+    right: 0;
+
+    overflow: hidden; /* gjør så alt holder seg inni topnav */
+    display: flex; /* får det til å være på en linje */
+    justify-content: center; /* Sentrerer det */
+    position: -webkit- sticky; /* Gjør så topnav er der npr du blar nedover på siden */
+    position: fixed; /* Setter fast posisjon */
+    background-color: blue; /* Setter farge til violet */
+    color: white;
+    z-index: 500; /* Gjør så den er over bilder */
+    align-self: flex-start; /* Aligner elementet til toppen av skjermen */
+}
+
+/* styler klassen links i topnav */
+.topnav .links {
+    max-height: 26px;/*  Setter maks høyde til 26 px */
+    font-size: 20px;/* Setter font størelse til 20 px */
+    display: block; /* Displayer det som block */
+    color: white; /* Setter tekstfarge til sort */
+    text-align: center; /* Midtstiller teksten */
+    padding: 14px 16px; /* Setter padding */
+    text-decoration: none; /* Fjerner text deoration */
+}
+
+/* Når man hoverer over links */
+.topnav .links:hover {
+    background-color: white; /* setter bakgrunnsfarge til hvit */
+    color: #141414; /* Setter tekst farge */
+    cursor:pointer; /* Endrer cursor til pointer */
+}
+
+/* Setter fargen på linkene i topnav */
+.topnav a{
+    background-color: blue;
+}
+
+/* displayer elementene med id flext som flex */
+#myLinks{
+    display: flex;
+}
+	
+/* Gjør så burger menyen ikke vises */
+.icon{
+    display: none;
+}
+}
