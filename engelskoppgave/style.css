@@ -9,7 +9,7 @@ body, html{
     align-items: center;
     justify-content: center;
     background: rgb(33,200,169);
-background: radial-gradient(circle, rgb(91, 155, 172) 0%, rgb(92, 119, 170) 51%, rgb(71, 38, 181) 100%);
+background: radial-gradient(circle, rgb(46, 122, 255) 0%, rgb(12, 57, 255) 51%, rgb(76, 22, 255) 100%);
     width: 100%;
     height: 120px;
     top: 0;

@@ -1,0 +1,19 @@
+
+.container{
+border: 0cap;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    border: solid black 1px;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    border: solid black 1px;
+    width: 100%;
+}
