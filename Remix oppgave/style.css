@@ -1,0 +1,285 @@
+.Overskrift{
+    font-size: xx-large;
+    text-align: center;
+}
+
+.Logo{
+    padding: 6px;
+    border: black 2px solid;
+}
+
+.BoxParent1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.BoxChild1L{
+    border: black 2px solid;
+    width: 30%;
+    margin-top: 1%;
+}
+
+.BoxChild1R{
+    border: black 2px solid;
+    width: 62.5%;
+    margin-top: 1%;
+}
+
+.BoxParent2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.BoxChild2{
+    border: black 2px solid;
+    width: 25%;
+    height: 25%;
+    margin-top: 150px;
+}
+
+body, html {
+    height: auto;
+}
+
+body{
+    background-color: #F9F8F0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+    top: 15%; 
+}
+
+.caption p.header {
+    color: #fff;
+    padding: 18px 18px 0px;
+    font-size: 40px;
+    letter-spacing: 10px;
+    cursor: default;
+}
+
+.caption p.subtext {
+    color: #fff;
+    padding: 0px 18px 18px;
+    font-size: 25px;
+    cursor: default;
+    max-width: 700px;
+    margin: auto;
+}
+
+.content {
+    background-color: #ddd;
+    padding: 10px;
+    overflow:hidden;
+    min-height:200px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project{
+    border-radius: 25px;
+    background-color: #c8c8c8;
+    border: 2px, #c8c8c8;
+    padding:10px;
+    text-align: center;
+    margin:25px;
+    width: 245px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.39);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.39);
+}
+
+.center{
+    text-align: center;
+    color: #383838;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.nocursor{
+    cursor:default;
+}
+
+.caphead{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.project img{
+    width: auto;
+    max-width: 220px;
+    height: 130px;
+}
+
+.spacer{
+    background-color: #c8c8c8;
+    height: 1px;
+}
+
+@media only screen and (max-width:991px){
+	/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #B9BD87;
+  position: relative;
+  z-index: 500;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #B9BD87;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #ddd;
+  color: white;
+}
+	
+.topnav .imglink{
+    content: url("Bilder/logo.jpg");
+    padding-top: 2px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 2px;
+    width: auto;
+    max-height: 44px;
+} 
+
+/* setter strong tagger i textel til font størelse 30 */
+.textel strong{
+    font-size: 30px;
+}
+
+.textel{
+    text-align: center;
+    margin: auto;
+}
+
+}
+@media only screen and (min-width:992px){
+
+    /* Strong tag sin tekst i textel er 50px */
+.textel strong{
+    font-size: 50px;
+}
+
+/* Setter maks bredde på textel til 60% */
+.textel{
+    max-width: 50%;
+}
+
+/* Flexer klassen art */
+.art{
+    display: flex;
+}
+
+.topnav .imglink{
+    content: url("Bilder/logo.jpg");
+    width: auto;
+    max-height: 50px;
+}
+
+.topnav .imglink:hover{
+    background-color: #8a9a60;
+    cursor:pointer;
+    content: url("Bilder/logo.jpg");
+    width: auto;
+    max-height: 50px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #B9BD87;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+.topnav .links {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav .links:hover {
+    background-color: #8a9a60;
+    cursor:pointer;
+}
+
+#myLinks{
+    display: flex;
+}
+	
+.icon{
+    display: none;
+}
+}
+
+.artimg{
+    max-width: 100%; /* setter bildet til 100% bredde */
+    max-height: auto; /* Automatisk justerer høyde */
+}
+
+.imgart {
+    color:#383838; /* Setter tekstfarge til #ddd */
+}
+
+.textel{
+    color:#383838; /*Setter tekstfarge til #ddd, en skygge av hvit */
+    cursor: default; /* setter sånn at musepekeren er normal når man hoverer over teksten */
+}
+
+.textel strong{
+    text-transform: uppercase; /* gjør sånn at alle strong tager i textel blir store bokstaver */
+}
+
+.textel p{
+    font-size: 25px; /* Setter font størelsen til paragrafer i texel til 25 */
+}
+
+/* setter en padding på 10px til klassen padding */
+.padding{
+    padding: 10px
+}    
